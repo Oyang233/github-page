@@ -2,6 +2,18 @@
 			margin:0;
 			padding: 0;
 		}
+		a:link{
+			color: #0000A0;
+		}
+		a:visited{
+			color: red;
+		}
+		a:hover{
+			color: #6A287E;
+		}
+		a:active{
+			color: #0000FF;
+		}
 		#header {
 			height: 70px;
 			background-color: white;
@@ -79,3 +91,41 @@
 			border-right: 1px solid #C0C0C0;
 			border-left: 1px solid #C0C0C0;
 		}
+		.tab_head{
+			border-bottom: solid #C0C0C0 1px;
+			width: 650px;
+			height: 25px;
+			background-color: #D0D0D0;
+		}
+		.tab_head h4{
+            border-top: /*solid cornflowerblue 1px*/;
+            border-right: solid gray 1px;
+            width: 50px;
+            height: 25px;
+            margin: 0;
+            float: left;
+            text-align: center;
+        }
+        .tab_content {
+        	border: ;
+        	width: 650px;
+       		height: 400px;
+        }
+            
+        .tab_content div{
+            display: none;
+        }
+            
+        .active {
+            background-color: red;
+        }
+            
+        .tab_content .show{
+            display: block;
+        }
+        input{
+        	border:1px solid #ccc;
+        	padding: 7px 0px;
+        	border-radius: 3px;
+        	padding-left:5px;
+        }
