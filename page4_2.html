@@ -23,7 +23,14 @@
 				text-align: center;
 				line-height: 25px;
 			}
+			.an{
+				height: 30px;width: 50px;
+				background-color: #FF6347;
+
+			}
+			
 	</style>
+
 </head>
 <body>
 	<div id="header">
@@ -37,8 +44,8 @@
 	</div>
 	<div id="line"></div>
 	<!--华丽的分割线-->
-	<div id="page">
-		<!-- <div id="page1" style="border:none">
+	<div id="page" style="height: 800px">
+		 <div id="page1" style="border:none">
 			<div class="page1_top"><b style="padding-right: 80px;line-height: 30px">市场情绪</b>2020/10/26</div>
 			<div class="page1_bottom">
 				<font>涨停数:</font><font style="color: red">&nbsp24</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -76,11 +83,77 @@
 				<font>成功率:</font><font style="color: red">&nbsp81.48%</font>&nbsp&nbsp&nbsp&nbsp&nbsp
 				<font>盈利率:</font><font style="color: green">&nbsp1.60%</font><br>
 			</div>
-		</div>  -->
+		</div>  
 		<!-- <div id="page2" style="height: 1200px"><h3>快讯</h3></div> -->
-		<div id="page3" style="height: 600px;border-left: none;border-right: none;border-bottom: none;">
-			<img style="margin-left: 50px" src=" http://image.sinajs.cn/newchart/min/n/sz300869.gif">
+		<div id="page3" style="height: 310px;">
+			<img style="margin-left: 50px" src="http://image.sinajs.cn/newchart/min/n/sz300869.gif">
+		</div>
+		<div id="page3">
+			<div class="tab_head"><!-- tab按键 -->
+				<h4 onclick="changtab(0)" class="active">买入</h2>
+				<h4 onclick="changtab(1)">卖出</h2>
+				<h4 onclick="changtab(2)">撤单</h2>
+			</div>
+			<div class="tab_content"><!-- tab内容 -->
+				<div class="show">
+					<br>
+					<form action="page4_3.html">
+						股票代码:<input type="text" placeholder="请输入代码"><br><br>
+						购买价格:<input type="text" placeholder="请输入价格"><br><br>
+						购买数量:<input type="text" placeholder="请输入数量" id="num">
+						<input type="button" value="100" class="an" onclick="changevalue(100)">
+						<input type="button" value="500" class="an" onclick="changevalue(500)">
+						<input type="button" value="1000" class="an" onclick="changevalue(1000)">
+						<br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input type="submit" value="购买" style="height: 35px;width: 70px">
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input type="reset" value="重置" style="height: 35px;width: 70px">
+					</form>
+				</div>
+				<div>
+					<br>
+					<form action="page4_3.html">
+						股票代码:<input type="text" placeholder="请输入代码"><br><br>
+						售出价格:<input type="text" placeholder="请输入价格"><br><br>
+						售出数量:<input type="text" placeholder="请输入数量" id="num1">
+						<input type="button" value="100" class="an" onclick="changevalue1(100)">
+						<input type="button" value="500" class="an" onclick="changevalue1(500)">
+						<input type="button" value="1000" class="an" onclick="changevalue1(1000)">
+						<br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input type="submit" value="售出" style="height: 35px;width: 70px">
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input type="reset" value="重置" style="height: 35px;width: 70px">
+					</form>
+				</div>
+				
+				</div>
+			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		var tabs = document.getElementsByClassName('tab_head')[0].getElementsByTagName('h4');
+		var contents = document.getElementsByClassName('tab_content')[0].getElementsByTagName('div');
+		function changtab(n){
+			for(var i = 0,len = tabs.length;i<len;i++){
+				if(i === n){
+					tabs[i].className = 'active';
+					contents[i].className = 'show';
+				}else{
+					tabs[i].className = '';
+					contents[i].className = '';
+				}
+			}
+		}
+		var a = document.getElementById('num');
+		function changevalue(x){
+			a.value = x;
+		}
+		var b = document.getElementById('num1');
+		function changevalue1(x){
+			b.value = x;
+		}
+
+
+	</script>
 </body>
 </html>
