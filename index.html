@@ -2,63 +2,375 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="css/mystyle_1.css">
 	<style type="text/css">
-		h2 {
-                border-top: solid cornflowerblue 1px;
-                border-left: solid cornflowerblue 1px;
-                width: 50px;
-                height: 25px;
-                margin: 0;
-                float: left;
-                text-align: center;
-            }
-            
-            .tab_content {
-                border: solid cornflowerblue 1px;
-                width: 152px;
-                height: 100px;
-            }
-            
-            .tab_content div{
-                display: none;
-            }
-            
-            .active {
-                background-color: red;
-            }
-            
-            .tab_content .show{
-                display: block;
-            }
+			.a_left{
+				height:80px;width: 160px;
+				background-color: white;
+				/*margin-top: 5px;*/
+				font-size: 20px;
+				border:none;
+				border-top:3px solid #AE0000;
+				background-image: linear-gradient(white,#D0D0D0);
+			}
+			.a_right{
+				float: right;
+				height: 280px;width: 490px;
+				/*background-color: #D0D0D0;*/
+				background-color: #D0D0D0;
+				border-top:3px solid #AE0000;
+				border-bottom: 1px solid #C0C0C0
+			}
+			.page1_top{
+				height: 30px;
+				background-color: #D0D0D0;
+				
+				border: 1px solid #C0C0C0;
+				border-top:3px solid #AE0000;
+			}
+			.page1_bottom{
+				line-height: 30px;
+			}
+			.page1_bottom1{
+				height: 25px;width: 200px;
+				background-color: #D0D0D0;
+				margin: auto;
+				margin-top: 5px;
+				text-align: center;
+				line-height: 25px;
+			}
+			.page3_top{
+				height: 25px;width: 640px;
+				margin: auto;
+				margin-top: 2px;
+				background-color: #D0D0D0; 
+				line-height: 25px;
+				font-size: 13px;
+			}
+			#tab{
+				font-size: 15px;
+				font-weight:300;
+				line-height: 30px;
+				text-align: center;
+				border:1px solid #D0D0D0;
+				border-collapse: collapse;
+				margin: auto;
+			}
+			#trr{
+				border:1px solid #D0D0D0;
+			}
+			.nav{
+				text-decoration: none;
+				color: dimgray;
+				margin:auto;
+			}
 	</style>
+	<script type="text/javascript">
+		function setCookie(name,value,day){
+			var oDate = new Date();
+			oDate.setDate(oDate.getDate()+day);
+			document.cookie = name + "=" + value + ";expires=" + oDate;
+		}
+		setCookie("name1","honn",1);
+		console.log(document.cookie);
+	</script>
 </head>
 <body>
-	<div class="tab_head"><!-- tab按键 -->
-		<h2 onclick="changtab(0)" class="active">A</h2>
-		<h2 onclick="changtab(1)">B</h2>
-		<h2 onclick="changtab(2)">C</h2>
+	<div id="header">
+		<div class="a">
+			<div class="b" style="background-color: #AE0000;"><a href="page1.html" class="c" style="border: none; color: white;">首页</a></div>
+			<div class="b"><a href="page2.html" class="c">行情</a></div>
+			<div class="b"><a href="page3.html" class="d">排行榜</a></div>
+			<div class="b"><a href="page4_1.html" class="c">选股</a></div>
+			<div class="b"><a href="page5_1.html" class="d" style="border:none;">新闻</a></div>
+		</div>
 	</div>
-	<div class="tab_content"><!-- tab内容 -->
-		<div class="show">123A</div>
-		<div>123B</div>
-		<div>123C</div><a href=""></a>
-	</div><input type="" name="">
-	<
-	<script type="text/javascript">
-		var tabs = document.getElementsByClassName('tab_head')[0].getElementsByTagName('h2');
-		var contents = document.getElementsByClassName('tab_content')[0].getElementsByTagName('div');
-		function changtab(n){
-			for(var i = 0,len = tabs.length;i<len;i++){
-				if(i === n){
-					tabs[i].className = 'active';
-					contents[i].className = 'show';
-				}else{
-					tabs[i].className = '';
-					contents[i].className = '';
-				}
-			}
-		}
-	</script>
+	<div id="line"></div>
+	<!-- 华丽的分割线 -->
+	<div id="page" >
+		<div id="page1" style="border-top:none">
+			<div class="page1_top"><b style="padding-right: 80px;line-height: 30px">市场情绪</b>2020/10/26</div>
+			<div class="page1_bottom">
+				<font>涨停数:</font><font style="color: red">&nbsp24</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>跌停数:</font><font style="color: green">&nbsp15</font><br>
+				<font>涨家数:</font><font style="color: red">1490</font>&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>跌家数:</font><font style="color: green">&nbsp2417</font><br>
+				<font>涨停炸板:</font><font style="color: green">26</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>炸板率:</font><font style="color: green">&nbsp63.41%</font><br>
+				<font>涨停表现:</font><br>
+				<table border="1" cellspacing="0">
+					<col width="60px">
+					<col width="60px">
+					<col width="60px">
+					<col width="60px">
+					<tr align="center">
+						<th>一板</th>
+						<th>二板</th>
+						<th>三板</th>
+						<th>四板</th>
+					</tr>
+					<tr align="center">
+						<th>12</th>
+						<th>4</th>
+						<th>4</th>
+						<th>2</th>
+					</tr>
+					<tr align="center">
+						<th>连板率</th>
+						<th>高</th>
+						<th>低</th>
+						<th>低</th>
+					</tr>
+				</table>
+				<div class="page1_bottom1">昨日连板</div>
+				<font>成功率:</font><font style="color: red">&nbsp81.48%</font>&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>盈利率:</font><font style="color: green">&nbsp1.60%</font><br>
+				<div class="page1_bottom1">市场量能</div>
+				<font>今日量能:</font><font style="color: red">&nbsp8708亿</font><br>
+				<font>上证量能:</font><font style="color: red">&nbsp3289亿</font><br>
+			</div>
+		</div> 
+		<!-- 左栏 -->
+		<div id="page2">
+			<h4>&nbsp&nbsp&nbsp&nbsp快讯</h4>
+			<!-- <table  id="tab" style="text-align: none">
+					<col width="250px">
+					<tr  id="trr">
+						<th>中国恒大：148.5亿元转让广汇实业40.964%股权予申能集团，公司通过出售广汇实业之股权，有助于集团聚焦核心业务，实现长期稳定健康发展</th>
+					</tr>
+					<tr  id="trr">
+						<th>【全国政协召开双周协商座谈会 围绕“协调推进海洋资源保护与开发”协商议政】11月1日讯，十三届全国政协近日召开第42次双周协商座谈会。中共中央政治局常委、全国政协主席汪洋主持会议。他强调，要深入领会习近平总书记关于海洋工作的重要论述，从全面建设社会主义现代化国家的战略全局关心海洋、认识海洋、经略海洋。要贯彻中共十九届五中全会精神，坚持以新发展理念为引领，坚持以推动高质量发展为主题，坚持陆海统筹，发展海洋经济，建设海洋强国</th>
+					</tr>
+			</table> -->
+			<div style="height: 2px;width: 100%;background-color: #AE0000"></div>
+			
+			<div style="font-size:14px;margin: auto;margin-left: 10px;margin-right: 10px;margin-top:30px;border-bottom:solid #C0C0C0 1px";><a href="page5.html">1.阿里创投有意入局芒果超媒 或成第二大股东</a></div>
+			<div style="font-size:14px;margin: auto;margin-left: 10px;margin-right: 10px;margin-top:30px;border-bottom:solid #C0C0C0 1px"><a href="page5.html">2.紫光集团13亿私募债违约 一年内到期债券规模超60亿</a></div>
+			<div style="font-size:14px;margin: auto;margin-left: 10px;margin-right: 10px;margin-top:30px;border-bottom:solid #C0C0C0 1px"><a href="page5.html">3.万盛股份：媒体发布或转载公司关联交易的相关文章失实</a></div>
+			<div style="font-size:14px;margin: auto;margin-left: 10px;margin-right: 10px;margin-top:30px;border-bottom:solid #C0C0C0 1px"><a href="page5.html">4.万辰生物子公司屡教不改:多次遭环保部门处罚 多年采购数据均异常</a></div>
+			<div style="font-size:14px;margin: auto;margin-left: 10px;margin-right: 10px;margin-top:30px;border-bottom:solid #C0C0C0 1px"><a href="page5.html">5.百济拟在科创板上市 成为首家三地上市的药企需闯哪些难关？</a></div>
+			
+		</div> 
+		<!-- 右栏 -->
+		<div id="page3" style="height: 350px;border-top:none "> 
+			<div class="a_right" id="tp"><!-- <img src="img\1.jpg"> -->
+				<img src="http://image.sinajs.cn/newchart/daily/n/sh000001.gif" width="100%" id="myimg">
+			</div>
+			<input type="button" value="上证指数" class="a_left" onclick="a()">
+			<input type="button" value="深证成指" class="a_left" onclick="b()">
+			<input type="button" value="创业板指" class="a_left" onclick="c()">
+		</div>
+		<!-- 中栏 -->
+		<div id="page3">
+			<h4>&nbsp&nbsp&nbsp&nbsp热点板块/热点概念</h4>
+			<div class="page3_top">板块名称&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;涨幅&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;成交额&emsp;&emsp;&emsp;&emsp;&emsp;主力买&emsp;&emsp;&emsp;&emsp;&emsp;主力卖&emsp;&emsp;&emsp;&emsp;&emsp;流通市值</div>
+			<table  id="tab">
+					<col width="108px">
+					<col width="108px">
+					<col width="108px">
+					<col width="108px">
+					<col width="108px">
+					<col width="108px">
+					<tr  id="trr">
+						<th><a href="page4_1.html">高送转</a></th>
+						<th><font style="color: red">5.03%</font></th>
+						<th>12.84亿</th>
+						<th><font style="color: red">8608万</font></th>
+						<th><font style="color: green">-8430万</font></th>
+						<th>635.2亿</th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_1.html">细胞免疫治疗</a></th>
+						<th><font style="color: red">2.94%</font></th>
+						<th>103.7亿</th>
+						<th><font style="color: red">14.05亿</font></th>
+						<th><font style="color: green">-7.72亿</font></th>
+						<th>3416亿</th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_1.html">超级品牌</a></th>
+						<th><font style="color: red">2.61%</font></th>
+						<th>569.7亿</th>
+						<th><font style="color: red">120.7亿</font></th>
+						<th><font style="color: green">-90.67亿</font></th>
+						<th>66475亿</th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_1.html">汽车整车</a></th>
+						<th><font style="color: red">2.32%</font></th>
+						<th>198.5亿</th>
+						<th><font style="color: red">34.30亿</font></th>
+						<th><font style="color: green">-30.73亿</font></th>
+						<th>9236亿</th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_1.html">医疗器械服务</a></th>
+						<th><font style="color: red">1.83%</font></th>
+						<th>422.0亿</th>
+						<th><font style="color: red">51.17亿</font></th>
+						<th><font style="color: green">-36.14亿</font></th>
+						<th>18090亿</th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_1.html">生物疫苗</a></th>
+						<th><font style="color: red">1.74%</font></th>
+						<th>272.8亿</th>
+						<th><font style="color: red">35.76亿</font></th>
+						<th><font style="color: green">-25.78亿</font></th>
+						<th>12319亿</th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_1.html">啤酒概念</a></th>
+						<th><font style="color: red">1.14%</font></th>
+						<th>25.37亿</th>
+						<th><font style="color: red">2.80亿</font></th>
+						<th><font style="color: green">-1.42亿</font></th>
+						<th>1757亿</th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_1.html">中药</a></th>
+						<th><font style="color: red">1.06%</font></th>
+						<th>89.06亿</th>
+						<th><font style="color: red">8.25亿</font></th>
+						<th><font style="color: green">-8.39亿</font></th>
+						<th>7688亿</th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_1.html">数字乡村</a></th>
+						<th><font style="color: red">0.76%</font></th>
+						<th>37.76亿</th>
+						<th><font style="color: red">4.3亿</font></th>
+						<th><font style="color: green">-3.87亿</font></th>
+						<th>2084亿</th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_1.html">智能家居</a></th>
+						<th><font style="color: red">0.56%</font></th>
+						<th>373.6亿</th>
+						<th><font style="color: red">47.44亿</font></th>
+						<th><font style="color: green">-39.83亿</font></th>
+						<th>23596亿</th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_1.html">建筑材料</a></th>
+						<th><font style="color: red">0.49%</font></th>
+						<th>108.7亿</th>
+						<th><font style="color: red">12.15亿</font></th>
+						<th><font style="color: green">-9.63亿</font></th>
+						<th>7935亿</th>
+					</tr>
+
+				</table>
+		</div>
+		<div id="page3">
+			<h4>北上资金流向</h4>
+			<div class="page3_top">&emsp;&emsp;&emsp;&emsp;&emsp;日期&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;沪股通&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;深股通&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;合计</div>
+			<table  id="tab">
+					<col width="162px">
+					<col width="162px">
+					<col width="162px">
+					<col width="162px">
+					<tr id="trr">
+						<th>2020-10-30</th>
+						<th><font style="color: green">-39.4亿</font></th>
+						<th><font style="color: green">-17.4亿</font></th>
+						<th><font style="color: green">-56.7亿</font></th>
+					</tr>
+					<tr id="trr">
+						<th>2020-10-29</th>
+						<th><font style="color: red">9.55亿</font></th>
+						<th><font style="color: red">8.32亿</font></th>
+						<th><font style="color: red">17.86亿</font></th>
+					</tr>
+					<tr id="trr">
+						<th>2020-10-28</th>
+						<th><font style="color: red">3.07亿</font></th>
+						<th><font style="color: green">-1.20亿</font></th>
+						<th><font style="color: red">1.86亿</font></th>
+					</tr>
+					<tr id="trr">
+						<th>2020-10-27</th>
+						<th><font style="color: green">-31.6亿</font></th>
+						<th><font style="color: green">-14.8亿</font></th>
+						<th><font style="color: green">-46.4亿</font></th>
+					</tr>
+					<tr id="trr">
+						<th>2020-10-22</th>
+						<th><font style="color: green">-7.72亿</font></th>
+						<th><font style="color: green">-19.8亿</font></th>
+						<th><font style="color: green">-27.5亿</font></th>
+					</tr>
+					<tr id="trr">
+						<th>2020-10-21</th>
+						<th><font style="color: green">-20.2亿</font></th>
+						<th><font style="color: green">-49.0亿</font></th>
+						<th><font style="color: green">-69.2亿</font></th>
+					</tr>
+					<tr id="trr">
+						<th>2020-10-20</th>
+						<th><font style="color: green">-21.0亿</font></th>
+						<th><font style="color: red">9.87亿</font></th>
+						<th><font style="color: green">-11.1亿</font></th>
+					</tr>
+					<tr id="trr">
+						<th>2020-10-19</th>
+						<th><font style="color: green">-2.76亿</font></th>
+						<th><font style="color: green">-29.7亿</font></th>
+						<th><font style="color: green">-32.4亿</font></th>
+					</tr>
+					<tr id="trr">
+						<th>2020-10-16</th>
+						<th><font style="color: green">-2.32亿</font></th>
+						<th><font style="color: green">-2.71亿</font></th>
+						<th><font style="color: green">-5.03亿</font></th>
+					</tr>
+					<tr id="trr">
+						<th>2020-10-15</th>
+						<th><font style="color: red">2.82亿</font></th>
+						<th><font style="color: green">-6.15亿</font></th>
+						<th><font style="color: green">-3.33亿</font></th>
+					</tr>
+					<tr id="trr">
+						<th>2020-10-14</th>
+						<th><font style="color: red">2.05亿</font></th>
+						<th><font style="color: green">-17.6亿</font></th>
+						<th><font style="color: green">-15.5亿</font></th>
+					</tr>
+		</table>
+	</div>
+	<div style="height: 1px;width: 40%;background-color: #D0D0D0;margin:auto;margin-top: 70px;"></div>
+	<div style="height: 50px;width: 100%;margin-top: 30px;text-align: center;font-size: 10px;">
+		<a href="#" class="nav">关于我们</a>&nbsp|
+		<a href="#" class="nav">联系我们</a>&nbsp|
+		<a href="#" class="nav">新闻中心</a>&nbsp|
+		<a href="#" class="nav">产品中心</a>
+	</div>
 </body>
+<script type="text/javascript">
+function a(){
+	document.getElementById('myimg').src='http://image.sinajs.cn/newchart/daily/n/sh000001.gif'
+}
+function b(){
+	document.getElementById('myimg').src='http://image.sinajs.cn/newchart/daily/n/sz399001.gif'
+}
+function c(){
+	document.getElementById('myimg').src='http://image.sinajs.cn/newchart/daily/n/sz399006.gif'
+}
+
+$(function(){
+        $(".sideMenu .nLi h3").click(function(){
+            if($(this).parent(".nLi").hasClass("on")){
+                //当前状态展开的时候，继续点击无效
+            }else{
+                $(this).parents("ul").find(".sub").slideUp(300,function(){
+                    $(this).parents("ul").find(".nLi").removeClass("on");
+                });
+                $(this).next(".sub").slideDown(300,function(){
+                    $(this).parent(".nLi").addClass("on");
+                });
+            }
+        })
+    })
+</script>
 </html>
