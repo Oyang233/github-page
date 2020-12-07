@@ -6,7 +6,7 @@
 			color: #0000A0;
 		}
 		a:visited{
-			color: red;
+			color: #AE0000;
 		}
 		a:hover{
 			color: #6A287E;
@@ -119,6 +119,10 @@
         .active {
             background-color: red;
         }
+
+        .active1 {
+            background-color: #DCDCDC;
+        }
             
         .tab_content .show{
             display: block;
@@ -129,3 +133,34 @@
         	border-radius: 3px;
         	padding-left:5px;
         }
+        .tab_head1{
+			border-bottom: solid #C0C0C0 1px;
+			width: 650px;
+			height: 25px;
+			background-color: #D0D0D0;
+		}
+		.tab_head1 h4{
+            border-top: /*solid cornflowerblue 1px*/;
+            border-right: solid gray 1px;
+            width: 50px;
+            height: 25px;
+            margin: 0;
+            float: left;
+            text-align: center;
+        }
+        .tab_content1 {
+        	border: ;
+        	width: 650px;
+       		height: 400px;
+        }
+            
+        .tab_content1 div{
+            display: none;
+        }
+            
+        
+            
+        .tab_content1 .show{
+            display: block;
+        }
+        
