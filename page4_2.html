@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选股</title>
+	<link rel="stylesheet" type="text/css" href="css/mystyle_1.css">
+	<style type="text/css">
+		.page1_top{
+				height: 30px;
+				background-color: #D0D0D0;
+				
+				border: 1px solid #C0C0C0;
+				border-top:3px solid #AE0000;
+			}
+			.page1_bottom{
+				line-height: 30px;
+			}
+			.page1_bottom1{
+				height: 25px;width: 200px;
+				background-color: #D0D0D0;
+				margin: auto;
+				margin-top: 5px;
+				text-align: center;
+				line-height: 25px;
+			}
+			.an{
+				height: 30px;width: 50px;
+				background-color: #FF6347;
+
+			}
+			
+	</style>
+
+	<script type="text/javascript">
+
+		
+	</script>
+
+</head>
+<body>
+	<div id="header">
+		<div class="a">
+			<div class="b"><a href="page1.html" class="c" style="border: none;">首页</a></div>
+			<div class="b"><a href="page2.html" class="c">行情</a></div>
+			<div class="b"><a href="page3.html" class="d">排行榜</a></div>
+			<div class="b" style="background-color: #AE0000;"><a href="page4.html" class="c" style=" color: white;">选股</a></div>
+			<div class="b"><a href="page5_1.html" class="d" style="border:none;">新闻</a></div>
+		</div>
+	</div>
+	<div id="line"></div>
+	<!--华丽的分割线-->
+	<div id="page" style="height: 800px">
+		 <div id="page1" style="border:none">
+			<div class="page1_top"><b style="padding-right: 80px;line-height: 30px">市场情绪</b>2020/10/26</div>
+			<div class="page1_bottom">
+				<font>涨停数:</font><font style="color: red">&nbsp24</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>跌停数:</font><font style="color: green">&nbsp15</font><br>
+				<font>涨家数:</font><font style="color: red">1490</font>&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>跌家数:</font><font style="color: green">&nbsp2417</font><br>
+				<font>涨停炸板:</font><font style="color: green">26</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>炸板率:</font><font style="color: green">&nbsp63.41%</font><br>
+				<font>涨停表现:</font><br>
+				<table border="1px" cellspacing="0">
+					<col width="60px">
+					<col width="60px">
+					<col width="60px">
+					<col width="60px">
+					<tr align="center">
+						<th>一板</th>
+						<th>二板</th>
+						<th>三板</th>
+						<th>四板</th>
+					</tr>
+					<tr align="center">
+						<th>12</th>
+						<th>4</th>
+						<th>4</th>
+						<th>2</th>
+					</tr>
+					<tr align="center">
+						<th>连板率</th>
+						<th>高</th>
+						<th>低</th>
+						<th>低</th>
+					</tr>
+				</table>
+				<div class="page1_bottom1">昨日连板</div>
+				<font>成功率:</font><font style="color: red">&nbsp81.48%</font>&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>盈利率:</font><font style="color: green">&nbsp1.60%</font><br>
+			</div>
+		</div>  
+		<!-- <div id="page2" style="height: 1200px"><h3>快讯</h3></div> -->
+		<div id="page3" style="height: 350px;">
+			<div class="tab_head1">
+				<h4 onclick="changeimg(0)" class="active">分时图</h4>
+				<h4 onclick="changeimg(1)">K线图</h4>
+			</div>
+			<div class="tab_content1">
+				<div class="show"><img src="http://image.sinajs.cn/newchart/min/n/sh601006.gif" height="300px" style="margin-left:40px"></div>
+				<div><img src="http://image.sinajs.cn/newchart/daily/n/sh601006.gif" height="300px" style="margin-left:40px"></div>
+			</div>
+		</div>
+		<div id="page3">
+			<div class="tab_head"><!-- tab按键 -->
+				<h4 onclick="changtab(0)" class="active">买入</h2>
+				<h4 onclick="changtab(1)">卖出</h2>
+				<h4 onclick="changtab(2)">撤单</h2>
+			</div>
+			<div class="tab_content"><!-- tab内容 -->
+				<div class="show">
+					<br>
+					<form action="page4_3.html">
+						股票代码:<input type="text" placeholder="请输入代码" oninput="validateComments(this)" required/><br><br>
+						购买价格:<input type="text" placeholder="请输入价格"   title="请输入数字"  required/><br><br>
+						购买数量:<input type="text" placeholder="请输入数量"  oninput="validateComments1(this) " id="num"  required/>
+						<input type="button" value="1000" class="an" onclick="changevalue(1000)">
+						<input type="button" value="1500" class="an" onclick="changevalue(1500)">
+						<input type="button" value="2000" class="an" onclick="changevalue(2000)">
+						<br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input type="submit" value="购买" style="height: 35px;width: 70px">
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input type="reset" value="重置" style="height: 35px;width: 70px">
+					</form>
+				</div>
+				<div>
+					<br>
+					<form action="page4_3.html">
+						股票代码:<input type="text" placeholder="请输入代码" required/><br><br>
+						售出价格:<input type="text" placeholder="请输入价格" required/><br><br>
+						售出数量:<input type="text" placeholder="请输入数量" id="num1">
+						<input type="button" value="1000" class="an" onclick="changevalue1(1000)">
+						<input type="button" value="1500" class="an" onclick="changevalue1(1500)">
+						<input type="button" value="2000" class="an" onclick="changevalue1(2000)">
+						<br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input type="submit" value="售出" style="height: 35px;width: 70px">
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<input type="reset" value="重置" style="height: 35px;width: 70px">
+					</form>
+				</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var tabs = document.getElementsByClassName('tab_head')[0].getElementsByTagName('h4');
+		var contents = document.getElementsByClassName('tab_content')[0].getElementsByTagName('div');
+		function changtab(n){
+			for(var i = 0,len = tabs.length;i<len;i++){
+				if(i === n){
+					tabs[i].className = 'active';
+					contents[i].className = 'show';
+				}else{
+					tabs[i].className = '';
+					contents[i].className = '';
+				}
+			}
+		}
+		var a = document.getElementById('num');
+		function changevalue(x){
+			a.value = x;
+		}
+		var b = document.getElementById('num1');
+		function changevalue1(x){
+			b.value = x;
+		}
+		var c = document.getElementsByClassName('tab_head1')[0].getElementsByTagName('h4');
+		var d = document.getElementsByClassName('tab_content1')[0].getElementsByTagName('div');
+		function changeimg(n){
+			for(var i = 0,len = c.length;i<len;i++){
+				if(i === n){
+					c[i].className = 'active';
+					d[i].className = 'show';
+				}else{
+					c[i].className = '';
+					d[i].className = '';
+				}
+			}
+		}
+		function validateComments(input) {
+        if(input.value.length != 6){
+            input.setCustomValidity("请输入6位数代码");
+        }else{
+            //没有错误。清除任何错误消息
+            input.setCustomValidity("");
+        }
+    }
+
+    	function validateComments1(input) {
+        if(input.value.length<3){
+            input.setCustomValidity("请输入大于100的数目");
+        }else{
+            //没有错误。清除任何错误消息
+            input.setCustomValidity("");
+        }
+    }
+	</script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>行情</title>
+	<link rel="stylesheet" type="text/css" href="css/mystyle_1.css">
+	<style type="text/css">
+		.page1_top{
+				height: 30px;
+				background-color: #D0D0D0;
+				
+				border: 1px solid #C0C0C0;
+				border-top:3px solid #AE0000;
+			}
+			.page1_bottom{
+				line-height: 30px;
+			}
+			.page1_bottom1{
+				height: 25px;width: 200px;
+				background-color: #D0D0D0;
+				margin: auto;
+				margin-top: 5px;
+				text-align: center;
+				line-height: 25px;
+			}
+			#tab{
+				font-size: 15px;
+				font-weight:300;
+				line-height: 30px;
+				text-align: center;
+				border:1px solid #D0D0D0;
+				border-collapse: collapse;
+				margin: auto;
+			}
+			#trr{
+				border:1px solid #D0D0D0;
+			}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<div class="a">
+			<div class="b"><a href="page1.html" class="c" style="border: none;">首页</a></div>
+			<div class="b" style="background-color: #AE0000;"><a href="page2.html" class="c" style=" color: white;">行情</a></div>
+			<div class="b"><a href="page3.html" class="d">排行榜</a></div>
+			<div class="b"><a href="page4_1.html" class="c">选股</a></div>
+			<div class="b"><a href="page5_1.html" class="d" style="border:none;">新闻</a></div>
+		</div>
+	</div>
+	<div id="line"></div>
+	<!--华丽的分割线-->
+	<div id="page" >
+		<!-- <div id="page1" style="border:none">
+			<div class="page1_top"><b style="padding-right: 80px;line-height: 30px">市场情绪</b>2020/10/26</div>
+			<div class="page1_bottom">
+				<font>涨停数:</font><font style="color: red">&nbsp24</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>跌停数:</font><font style="color: green">&nbsp15</font><br>
+				<font>涨家数:</font><font style="color: red">1490</font>&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>跌家数:</font><font style="color: green">&nbsp2417</font><br>
+				<font>涨停炸板:</font><font style="color: green">26</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>炸板率:</font><font style="color: green">&nbsp63.41%</font><br>
+				<font>涨停表现:</font><br>
+				<table border="1px" cellspacing="0">
+					<col width="60px">
+					<col width="60px">
+					<col width="60px">
+					<col width="60px">
+					<tr align="center">
+						<th>一板</th>
+						<th>二板</th>
+						<th>三板</th>
+						<th>四板</th>
+					</tr>
+					<tr align="center">
+						<th>12</th>
+						<th>4</th>
+						<th>4</th>
+						<th>2</th>
+					</tr>
+					<tr align="center">
+						<th>连板率</th>
+						<th>高</th>
+						<th>低</th>
+						<th>低</th>
+					</tr>
+				</table>
+				<div class="page1_bottom1">昨日连板</div>
+				<font>成功率:</font><font style="color: red">&nbsp81.48%</font>&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>盈利率:</font><font style="color: green">&nbsp1.60%</font><br>
+			</div>
+		</div> -->
+		<div id="page2" class="tab_content" style="height: 600px;position : fixed ;  top : 13% ;  right : 11% ;">
+			<div class="show">
+				<h4>板块详情</h4>
+				<font>涨停数:</font><font style="color: red;line-height: 40px">&nbsp1</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>跌停数:</font><font style="color: green;line-height: 40px">&nbsp2</font><br>
+				<font>涨家数:</font><font style="color: red;line-height: 40px">6</font>&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>跌家数:</font><font style="color: green;line-height: 40px">&nbsp20</font><br>
+				<font>涨停炸板:</font><font style="color: green;line-height: 40px">0</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br>
+				
+				<font style="line-height: 40px">个股表现</font><br>
+				<table id="tab">
+					<col width="108px">
+					<col width="108px">
+					<tr id="trr">
+						<th><a href="page4_2.html">西部材料</a></th>
+						<th><font style="color: red">+9.96%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">*ST利源</a></th>
+						<th><font style="color: red">+5.03%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">*ST金贵</a></th>
+						<th><font style="color: red">+1.62%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">ST中孚</a></th>
+						<th><font style="color: red">+0.39%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">三祥新材</a></th>
+						<th><font style="color: red">+0.24%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">山东黄金</a></th>
+						<th><font style="color: red">+0.04%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">赤峰黄金</a></th>
+						<th><font style="color: green">-0.06%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">银泰黄金</a></th>
+						<th><font style="color: green">-0.33%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">西部黄金</a></th>
+						<th><font style="color: green">-0.42%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">天齐锂业</a></th>
+						<th><font style="color: green">-0.47%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">安宁股份</a></th>
+						<th><font style="color: green">-0.51%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">恒邦股份</a></th>
+						<th><font style="color: green">-0.64%</font></th>
+					</tr>
+				</table>
+			</div>
+			<div>
+				<h4>板块详情</h4>
+				<font>涨停数:</font><font style="color: red;line-height: 40px">&nbsp2</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>跌停数:</font><font style="color: green;line-height: 40px">&nbsp0</font><br>
+				<font>涨家数:</font><font style="color: red;line-height: 40px">92</font>&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>跌家数:</font><font style="color: green;line-height: 40px">&nbsp13</font><br>
+				<font>涨停炸板:</font><font style="color: green;line-height: 40px">1</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br>
+				
+				<font style="line-height: 40px">个股表现</font><br>
+				<table id="tab">
+					<col width="108px">
+					<col width="108px">
+					<tr id="trr">
+						<th><a href="page4_2.html">博晖创新</a></th>
+						<th><font style="color: red">+15.02%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">万方发展</a></th>
+						<th><font style="color: red">+10.03%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">正川股份</a></th>
+						<th><font style="color: red">+10.00%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">爱美客</a></th>
+						<th><font style="color: red">+7.95%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">普门科技</a></th>
+						<th><font style="color: red">+7.36%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">万泰生物</a></th>
+						<th><font style="color: red">+7.28%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">山东药玻</a></th>
+						<th><font style="color: red">+6.28%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">美迪希</a></th>
+						<th><font style="color: red">+5.54%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">*ST衡泰</a></th>
+						<th><font style="color:red">+5.14%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">*ST华塑</a></th>
+						<th><font style="color: red">+4.93%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">澳洋健康</a></th>
+						<th><font style="color: red">+4.79%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">楚天科技</a></th>
+						<th><font style="color: red">+4.77%</font></th>
+					</tr>
+				</table>
+
+			</div>
+			<div>
+				<h4>板块详情</h4>
+				<font>涨停数:</font><font style="color: red;line-height: 40px">&nbsp3</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>跌停数:</font><font style="color: green;line-height: 40px">&nbsp2</font><br>
+				<font>涨家数:</font><font style="color: red;line-height: 40px">23</font>&nbsp&nbsp&nbsp&nbsp&nbsp
+				<font>跌家数:</font><font style="color: green;line-height: 40px">&nbsp9</font><br>
+				<font>涨停炸板:</font><font style="color: green;line-height: 40px">3</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br>
+				
+				<font style="line-height: 40px">个股表现</font><br>
+				<table id="tab">
+					<col width="108px">
+					<col width="108px">
+					<tr id="trr">
+						<th><a href="page4_2.html">华资实业</a></th>
+						<th><font style="color: red">+10.03%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">宏辉果蔬</a></th>
+						<th><font style="color: red">+10.02%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">大北农</a></th>
+						<th><font style="color: red">+9.98%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">朗源股份</a></th>
+						<th><font style="color: red">+4.51%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">京粮控股</a></th>
+						<th><font style="color: red">+3.84%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">金新农</a></th>
+						<th><font style="color: red">+3.61%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">金健米业</a></th>
+						<th><font style="color: red">+3.04%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">安琪酵母</a></th>
+						<th><font style="color: red">+2.36%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">海大集团</a></th>
+						<th><font style="color: red">+2.33%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">新希望</a></th>
+						<th><font style="color: red">+2.11%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">傲农生物</a></th>
+						<th><font style="color: red">+1.98%</font></th>
+					</tr>
+					<tr id="trr">
+						<th><a href="page4_2.html">禾丰牧业</a></th>
+						<th><font style="color: red">+1.85%</font></th>
+					</tr>
+				</table>
+
+			</div>
+		</div>
+		<div id="page3" class="tab_head" style="height: 1600px;width: 925px;margin-left: 0px;background-color:#D3D3D3">
+			<div onclick="changtab(0)" class="active1" style="margin-top: 20px;border-bottom: 3px solid #AE0000">
+				<img src="http://image.sinajs.cn/newchart/min/n/sh603976.gif" width="500px">
+				<font>有色冶炼加工</font>
+				<font style="color: red">+2.30%</font>
+			</div>
+			<div onclick="changtab(1)" style="margin-top: 20px;border-bottom: 3px solid #AE0000">
+				<img src="http://image.sinajs.cn/newchart/min/n/sh603456.gif" width="500px">
+				<font>医疗器械服务</font>
+				<font style="color: red">+2.15%</font>
+			</div>
+			<div onclick="changtab(2)" style="margin-top: 20px;border-bottom: 3px solid #AE0000">
+				<img src="http://image.sinajs.cn/newchart/min/n/sh603232.gif" width="500px">
+				<font>农产品加工</font>
+				<font style="color: red">+1.50%</font>
+			</div>
+			<div onclick="changtab(3)" style="margin-top: 20px;border-bottom: 3px solid #AE0000">
+				<img src="http://image.sinajs.cn/newchart/min/n/sh603232.gif" width="500px">
+				<font>化学制药</font>
+				<font style="color: red">+1.41%</font>
+			</div>
+			<div onclick="changtab(4)" style="margin-top: 20px;border-bottom: 3px solid #AE0000">
+				<img src="http://image.sinajs.cn/newchart/min/n/sh603232.gif" width="500px">
+				<font>银行</font>
+				<font style="color: red">+1.31%</font>
+			</div>
+		</div>
+		<div></div>
+	</div>
+</body>
+<script type="text/javascript">
+		var tabs = document.getElementsByClassName('tab_head')[0].getElementsByTagName('div');
+		var contents = document.getElementsByClassName('tab_content')[0].getElementsByTagName('div');
+		function changtab(n){
+			for(var i = 0,len = tabs.length;i<len;i++){
+				if(i === n){
+					tabs[i].className = 'active1';
+					contents[i].className = 'show';
+				}else{
+					tabs[i].className = '';
+					contents[i].className = '';
+				}
+			}
+		}
+	</script>
+</html>

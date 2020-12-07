@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>左侧伸缩导航菜单</title>
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<link rel="stylesheet" href="css/common.css">
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+</head>
+<body>
+<h2>滑动—展开隐藏</h2>
+<div class="sideMenu">
+    <ul>
+        <li class="nLi on">
+            <h3>一级菜单</h3>
+            <ul class="sub">
+                <li><a href="">二级菜单</a></li>
+                <li><a href="">二级菜单</a></li>
+                <li><a href="">二级菜单</a></li>
+                <li><a href="">二级菜单</a></li>
+                <li><a href="">二级菜单</a></li>
+            </ul>
+        </li>
+        <li class="nLi">
+            <h3>一级菜单</h3>
+            <ul class="sub">
+                <li><a href="">二级菜单</a></li>
+                <li><a href="">二级菜单</a></li>
+                <li><a href="">二级菜单</a></li>
+                <li><a href="">二级菜单</a></li>
+                <li><a href="">二级菜单</a></li>
+            </ul>
+        </li>
+        <li class="nLi">
+            <h3>一级菜单</h3>
+            <ul class="sub">
+                <li><a href="">二级菜单</a></li>
+                <li><a href="">二级菜单</a></li>
+                <li><a href="">二级菜单</a></li>
+                <li><a href="">二级菜单</a></li>
+                <li><a href="">二级菜单</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        $(".sideMenu .nLi h3").click(function(){
+            if($(this).parent(".nLi").hasClass("on")){
+                $(this).next(".sub").slideUp(300,function(){
+                    $(this).parent(".nLi").removeClass("on")
+                });
+            }else{
+                $(this).next(".sub").slideDown(300,function(){
+                    $(this).parent(".nLi").addClass("on")
+                });
+            }
+        })
+    })
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.pages {
+    height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    /* margin-top: 73px; */
+    /* margin-left: 17px; */
+    display: block;
+    width: 100%;
+
+}
+
+.left-content {
+    width: 210px;
+    float: left;
+    background: #eaeff3;
+    color: #176bed;
+}
+
+.right-content {
+    float: left;
+}
+
+.table-body {
+    width: 100%;
+    overflow: auto;
+}
+
+.table-head {
+    width: 100%;
+    overflow: hidden;
+}
+
+.left-content .table-body {
+    overflow: hidden;
+}
+
+.table-left .table {
+    height: 400px;
+    background-color: #ffffff;
+    overflow: hidden;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+table::-webkit-scrollbar {
+    display: none;
+}
+
+.table-box{
+    display: block;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+.content-table {
+    height: 400px;
+}
+
+.content-table th,
+.full-table th {
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    background: #eaeff3;
+    font-weight: 400;
+    color: #176bed;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.content-table td,
+.full-table td {
+    line-height: 35px;
+    text-align: center;
+    word-wrap: break-word;
+    word-wrap: normal\0;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+th,
+td p {
+    width: 101px;
+    display: inline-block;
+    line-height: 14px;
+    padding: auto 0;
+    margin: auto 0;
+    vertical-align: middle;
+}
+
+.content-table {
+    display: block;
+    background-color: #ffffff;
+}
+
+thead,
+tbody {
+    background-color: #ffffff;
+}
