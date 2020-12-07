@@ -66,7 +66,15 @@
 				margin:auto;
 			}
 	</style>
-	
+	<script type="text/javascript">
+		function setCookie(name,value,day){
+			var oDate = new Date();
+			oDate.setDate(oDate.getDate()+day);
+			document.cookie = name + "=" + value + ";expires=" + oDate;
+		}
+		setCookie("name1","honn",1);
+		console.log(document.cookie);
+	</script>
 </head>
 <body>
 	<div id="header">
@@ -75,7 +83,7 @@
 			<div class="b"><a href="page2.html" class="c">行情</a></div>
 			<div class="b"><a href="page3.html" class="d">排行榜</a></div>
 			<div class="b"><a href="page4_1.html" class="c">选股</a></div>
-			<div class="b"><a href="page5.html" class="d" style="border:none;">新闻</a></div>
+			<div class="b"><a href="page5_1.html" class="d" style="border:none;">新闻</a></div>
 		</div>
 	</div>
 	<div id="line"></div>
@@ -349,5 +357,20 @@ function b(){
 function c(){
 	document.getElementById('myimg').src='http://image.sinajs.cn/newchart/daily/n/sz399006.gif'
 }
+
+$(function(){
+        $(".sideMenu .nLi h3").click(function(){
+            if($(this).parent(".nLi").hasClass("on")){
+                //当前状态展开的时候，继续点击无效
+            }else{
+                $(this).parents("ul").find(".sub").slideUp(300,function(){
+                    $(this).parents("ul").find(".nLi").removeClass("on");
+                });
+                $(this).next(".sub").slideDown(300,function(){
+                    $(this).parent(".nLi").addClass("on");
+                });
+            }
+        })
+    })
 </script>
 </html>

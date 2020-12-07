@@ -23,16 +23,32 @@
 			<div class="b"><a href="page2.html" class="c">行情</a></div>
 			<div class="b"><a href="page3.html" class="d">排行榜</a></div>
 			<div class="b" style="background-color: #AE0000;"><a href="page4.html" class="c" style=" color: white;">选股</a></div>
-			<div class="b"><a href="page5.html" class="d" style="border:none;">新闻</a></div>
+			<div class="b"><a href="page5_1.html" class="d" style="border:none;">新闻</a></div>
 		</div>
 	</div>
 	<div id="line"></div>
 	<div>
 		<br><br><br>
 		<h3 style="text-align: center;">恭喜您，交易成功！</h3>
+		<div id="timer" style="color:red;text-align: center;"></div>
 		<br><br><br>
 		<form action="page4_2.html">
 			<input type="submit" value="继续交易" class="btn">
 		</form>
 	</div>
+	<script type="text/javascript">
+	var myVar;
+	var maxtime = 5; //一个小时，按秒计算，自己调整!   
+    function CountDown() {
+         if (maxtime >= 0) {
+            msg =  maxtime + "秒钟之后自动返回购买页面";
+            document.all["timer"].innerHTML = msg;
+            maxtime--;
+            } else{
+                // clearInterval(timer);
+                myVar = setTimeout("javascript:location.href='page4_2.html'", 0);
+            }
+        }
+    timer = setInterval("CountDown()", 1000);   
+	</script>
 </body>

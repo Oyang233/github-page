@@ -31,6 +31,11 @@
 			
 	</style>
 
+	<script type="text/javascript">
+
+		
+	</script>
+
 </head>
 <body>
 	<div id="header">
@@ -39,7 +44,7 @@
 			<div class="b"><a href="page2.html" class="c">行情</a></div>
 			<div class="b"><a href="page3.html" class="d">排行榜</a></div>
 			<div class="b" style="background-color: #AE0000;"><a href="page4.html" class="c" style=" color: white;">选股</a></div>
-			<div class="b"><a href="page5.html" class="d" style="border:none;">新闻</a></div>
+			<div class="b"><a href="page5_1.html" class="d" style="border:none;">新闻</a></div>
 		</div>
 	</div>
 	<div id="line"></div>
@@ -85,8 +90,15 @@
 			</div>
 		</div>  
 		<!-- <div id="page2" style="height: 1200px"><h3>快讯</h3></div> -->
-		<div id="page3" style="height: 310px;">
-			<img style="margin-left: 50px" src="http://image.sinajs.cn/newchart/min/n/sz300869.gif">
+		<div id="page3" style="height: 350px;">
+			<div class="tab_head1">
+				<h4 onclick="changeimg(0)" class="active">分时图</h4>
+				<h4 onclick="changeimg(1)">K线图</h4>
+			</div>
+			<div class="tab_content1">
+				<div class="show"><img src="http://image.sinajs.cn/newchart/min/n/sh601006.gif" height="300px" style="margin-left:40px"></div>
+				<div><img src="http://image.sinajs.cn/newchart/daily/n/sh601006.gif" height="300px" style="margin-left:40px"></div>
+			</div>
 		</div>
 		<div id="page3">
 			<div class="tab_head"><!-- tab按键 -->
@@ -98,12 +110,12 @@
 				<div class="show">
 					<br>
 					<form action="page4_3.html">
-						股票代码:<input type="text" placeholder="请输入代码"><br><br>
-						购买价格:<input type="text" placeholder="请输入价格"><br><br>
-						购买数量:<input type="text" placeholder="请输入数量" id="num">
-						<input type="button" value="100" class="an" onclick="changevalue(100)">
-						<input type="button" value="500" class="an" onclick="changevalue(500)">
+						股票代码:<input type="text" placeholder="请输入代码" oninput="validateComments(this)" required/><br><br>
+						购买价格:<input type="text" placeholder="请输入价格"   title="请输入数字"  required/><br><br>
+						购买数量:<input type="text" placeholder="请输入数量"  oninput="validateComments1(this) " id="num"  required/>
 						<input type="button" value="1000" class="an" onclick="changevalue(1000)">
+						<input type="button" value="1500" class="an" onclick="changevalue(1500)">
+						<input type="button" value="2000" class="an" onclick="changevalue(2000)">
 						<br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 						<input type="submit" value="购买" style="height: 35px;width: 70px">
 						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -113,12 +125,12 @@
 				<div>
 					<br>
 					<form action="page4_3.html">
-						股票代码:<input type="text" placeholder="请输入代码"><br><br>
-						售出价格:<input type="text" placeholder="请输入价格"><br><br>
+						股票代码:<input type="text" placeholder="请输入代码" required/><br><br>
+						售出价格:<input type="text" placeholder="请输入价格" required/><br><br>
 						售出数量:<input type="text" placeholder="请输入数量" id="num1">
-						<input type="button" value="100" class="an" onclick="changevalue1(100)">
-						<input type="button" value="500" class="an" onclick="changevalue1(500)">
 						<input type="button" value="1000" class="an" onclick="changevalue1(1000)">
+						<input type="button" value="1500" class="an" onclick="changevalue1(1500)">
+						<input type="button" value="2000" class="an" onclick="changevalue1(2000)">
 						<br><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 						<input type="submit" value="售出" style="height: 35px;width: 70px">
 						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -152,8 +164,36 @@
 		function changevalue1(x){
 			b.value = x;
 		}
+		var c = document.getElementsByClassName('tab_head1')[0].getElementsByTagName('h4');
+		var d = document.getElementsByClassName('tab_content1')[0].getElementsByTagName('div');
+		function changeimg(n){
+			for(var i = 0,len = c.length;i<len;i++){
+				if(i === n){
+					c[i].className = 'active';
+					d[i].className = 'show';
+				}else{
+					c[i].className = '';
+					d[i].className = '';
+				}
+			}
+		}
+		function validateComments(input) {
+        if(input.value.length != 6){
+            input.setCustomValidity("请输入6位数代码");
+        }else{
+            //没有错误。清除任何错误消息
+            input.setCustomValidity("");
+        }
+    }
 
-
+    	function validateComments1(input) {
+        if(input.value.length<3){
+            input.setCustomValidity("请输入大于100的数目");
+        }else{
+            //没有错误。清除任何错误消息
+            input.setCustomValidity("");
+        }
+    }
 	</script>
 </body>
 </html>
