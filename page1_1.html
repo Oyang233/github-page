@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<script type="text/javascript">
+			// function setCookie(cname,cvalue,exdays){
+   //  			var d = new Date();
+   // 				d.setTime(d.getTime()+(exdays*24*60*60*1000));
+   //  			var expires = "expires="+d.toGMTString();
+   //  			document.cookie = cname+"="+cvalue+"; "+expires;
+			// }
+
+			function setCookie(name,value,day){
+            	var oDate = new Date();
+            	oDate.setDate(oDate.getDate()+day);
+            	document.cookie = name + "=" + value + ";expires=" + oDate;
+        	}
+
+			function getCookie(name){
+    			var str = document.cookie;
+    			var arr = str.split(";");
+    			for(var i = 0;i < arr.length;i++){
+    				var arr1 = arr[i].split("=");
+    				if(arr1[0]==name){
+    					return arr1[1];
+    				}
+    			}
+			}
+
+			// if(getCookie("username")){
+			// 	aInput[0].value = getCookie("username");
+			// 	aInput[1].value = getCookie("password");
+			// }
+			function checkCookie(){
+    			var user=getCookie("username");
+    			if (user!=""){
+        			alert("欢迎 " + user + " 再次访问");
+    			}
+    			else {
+        			alert("欢迎您的访问");
+    			}
+			}
+
+  			var aInput = document.getElementsByTagName("input");
+  			aInput[2].onclick = function(){
+  				var username = aInput[0].value;
+  				var password = aInput[1].value;
+  				setCookie("username",username,1);
+  				setCookie("password",password,1);
+  				
+  			}
+	</script>
+</head>
+<body>
+	<form action="#" method="post">
+		账号名称<input type="text" name="uname">
+		账号密码<input type="password" name="upwd">
+		<input type="submit" value="登录">
+	</form>
+</body>
+</html>
