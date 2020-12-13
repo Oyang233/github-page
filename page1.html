@@ -72,6 +72,29 @@
 			oDate.setDate(oDate.getDate()+day);
 			document.cookie = name + "=" + value + ";expires=" + oDate;
 		}
+		function getCookie(name){
+			var str = document.cookie;
+			var arr = str.split(";");
+			for(var i = 0;i < arr.length;i++){
+				var arr1 = arr[i].split("=");
+				if(arr1[0] == name){
+					return arr1[1];
+				}
+			}
+		}
+		function checkCookie(){
+    		var user=getCookie("username");
+    		if (user!=""){
+    		    alert("欢迎 " + user + " 再次访问");
+    		}
+    		else {
+        		user = prompt("账号:","");
+        		pwd = prompt("密码："，"")
+        		if (user!="" && user!=null){
+            		setCookie("username",user,1);
+        		}
+    		}
+		}
 		setCookie("name1","honn",1);
 		console.log(document.cookie);
 	</script>
