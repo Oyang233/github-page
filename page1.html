@@ -91,15 +91,15 @@
         		user = prompt("账号:","");
         		pwd = prompt("密码：","");
         		if (user!="" && user!=null){
-            		setCookie("username",user,1);
+            		setCookie("username",user,30);
         		}
     		}
 		}
-		setCookie("name1","honny",1);
+		setCookie("name1","honny",30);
 		console.log(document.cookie);
 	</script>
 </head>
-<body>
+<body  onload="checkCookie()">
 	<div id="header">
 		<div class="a">
 			<div class="b" style="background-color: #AE0000;"><a href="page1_1.html" class="c" style="border: none; color: white;">首页</a></div>
