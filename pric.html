@@ -1,0 +1,101 @@
+<!--  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+    <script type="text/javascript">
+        function setCookie(name,value,day){
+            var oDate = new Date();
+            oDate.setDate(oDate.getDate()+day);
+            document.cookie = name + "=" + value + ";expires=" + oDate;
+        }
+        setCookie("name1","honn",1);
+        console.log(document.cookie);
+
+        function getCookie(name){
+
+        }
+    </script>
+    <script type="text/javascript">
+    document.cookie = "adb";
+
+    </script>
+</body>
+</html> 
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<head>
+<script>
+function setCookie(cname,cvalue,exdays){
+    var d = new Date();
+    d.setTime(d.getTime()+(exdays*24*60*60*1000));
+    var expires = "expires="+d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+
+function getCookie(cname){
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+    }
+    return "";
+}
+
+function checkCookie(){
+    var user=getCookie("username");
+    if (user!=""){
+        alert("欢迎 " + user + " 再次访问");
+    }
+    else {
+        user = prompt("请输入你的名字:","");
+        if (user!="" && user!=null){
+            setCookie("username",user,30);
+        }
+    }
+}
+console.log(document.cookie);
+</script>
+</head>
+    
+<body onload="checkCookie()">
+        
+</body>
+    
+</html> 
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <!--  <button onclick="myFunction()">点我</button> -->
+<!--     <div id="timer" style="color:red"></div>
+<script>
+var myVar;
+var maxtime = 5; //一个小时，按秒计算，自己调整!   
+    function CountDown() {
+         if (maxtime >= 0) {
+            msg = "距离结束还有" + maxtime + "秒";
+            document.all["timer"].innerHTML = msg;
+            maxtime--;
+            } else{
+                // clearInterval(timer);
+                myVar = setTimeout("javascript:location.href='project/page1.html'", 0);
+            }
+        }
+    timer = setInterval("CountDown()", 1000);   
+</script>
+</body>
+</html> -->
