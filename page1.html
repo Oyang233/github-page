@@ -121,7 +121,7 @@ function checkCookie(){
         alert("欢迎 " + user + " 的访问");
     }
     else {
-        user = prompt("请输入你的名字:","");
+        user = prompt("用户名:","");
         if (user!="" && user!=null){
             setCookie("username",user,30);
         }
