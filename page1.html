@@ -134,7 +134,6 @@ function checkCookie(){
 		<div class="a">
 			<div class="b" style="background-color: #AE0000;"><a href="page1_1.html" class="c" style="border: none; color: white;">首页</a></div>
 			<div class="b"><a href="page2.html" class="c">行情</a></div>
-			<div class="b"><a href="page3.html" class="d">排行榜</a></div>
 			<div class="b"><a href="page4_1.html" class="c">选股</a></div>
 			<div class="b"><a href="page5_1.html" class="d" style="border:none;">新闻</a></div>
 		</div>
@@ -411,19 +410,6 @@ function c(){
 	document.getElementById('myimg').src='http://image.sinajs.cn/newchart/daily/n/sz399006.gif'
 }
 
-$(function(){
-        $(".sideMenu .nLi h3").click(function(){
-            if($(this).parent(".nLi").hasClass("on")){
-                //当前状态展开的时候，继续点击无效
-            }else{
-                $(this).parents("ul").find(".sub").slideUp(300,function(){
-                    $(this).parents("ul").find(".nLi").removeClass("on");
-                });
-                $(this).next(".sub").slideDown(300,function(){
-                    $(this).parent(".nLi").addClass("on");
-                });
-            }
-        })
-    })
+
 </script>
 </html>
