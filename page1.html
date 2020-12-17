@@ -13,6 +13,7 @@
 				border:none;
 				border-top:3px solid #AE0000;
 				background-image: linear-gradient(white,#D0D0D0);
+				float: left;
 			}
 			.a_right{
 				float: right;
@@ -65,40 +66,14 @@
 				color: dimgray;
 				margin:auto;
 			}
+			div.router-wrap {
+            width: 100%;
+            height: 100%;
+            background: #fefefe;
+        }
 	</style>
 	<script type="text/javascript">
-		// function setCookie(name,value,day){
-		// 	var oDate = new Date();
-		// 	oDate.setDate(oDate.getDate()+day);
-		// 	document.cookie = name + "=" + value + ";expires=" + oDate;
-		// }
-		// function getCookie(name){
-		// 	var str = document.cookie;
-		// 	var arr = str.split(";");
-		// 	for(var i = 0;i < arr.length;i++){
-		// 		var arr1 = arr[i].split("=");
-		// 		if(arr1[0] == name){
-		// 			return arr1[1];
-		// 		}
-		// 	}
-		// 	return "";
-		// }
-		// function checkCookie(){
-  //   		var user=getCookie("username");
-  //   		var pwd;
-  //   		if (user!=""){
-  //   		    alert("欢迎 " + user + " 再次访问");
-  //   		}
-  //   		else {
-  //       		user = prompt("用户名:","");
-  //       		if (user!="" && user!=null){
-  //           		setCookie("username",user,1);
-  //       		}
-  //   		}
-		// }
-		// setCookie("name1","honny",1);
-		// console.log(document.cookie);
-		function setCookie(cname,cvalue,exdays){
+function setCookie(cname,cvalue,exdays){
     var d = new Date();
     d.setTime(d.getTime()+(exdays*24*60*60*1000));
     var expires = "expires="+d.toGMTString();
@@ -183,6 +158,7 @@ function checkCookie(){
 				<font>上证量能:</font><font style="color: red">&nbsp3289亿</font><br>
 			</div>
 		</div> 
+		
 		<!-- 左栏 -->
 		<div id="page2">
 			<h4>&nbsp&nbsp&nbsp&nbsp快讯</h4>
@@ -391,6 +367,11 @@ function checkCookie(){
 					</tr>
 		</table>
 	</div>
+		<div id="page1" class="router-wrap" style="height: 150px;position : fixed ;  top : 70% ;  left : 10.5% ;">
+			<H4>更改页面颜色</H4>
+			<a href="#/pink">粉色</a><br>
+			<a href="#/yellow">黄色</a><br>
+		</div>
 	<div style="height: 1px;width: 40%;background-color: #D0D0D0;margin:auto;margin-top: 70px;"></div>
 	<div style="height: 50px;width: 100%;margin-top: 30px;text-align: center;font-size: 10px;">
 		<a href="#" class="nav">关于我们</a>&nbsp|
@@ -409,7 +390,60 @@ function b(){
 function c(){
 	document.getElementById('myimg').src='http://image.sinajs.cn/newchart/daily/n/sz399006.gif'
 }
+// 创建Router构造函数
+        // currentHash为当前hash值，routes为路径对象
+        function Router() {
+            this.currentHash = '/';
+            this.routes = {};
+        }
 
+        // 注册路径，每个路径对应一个回调函数。 
+        Router.prototype.route = function (path, callback) {
+            this.routes[path] = callback || function () {
+                alert('未定义回调函数！');
+            }
+        }
+
+        // 更新页面函数
+        Router.prototype.refresh = function () {
+            this.currentHash = location.hash.slice(1) || '/';
+            this.routes[this.currentHash]();
+        }
+
+        // 初始化
+        Router.prototype.init = function () {
+            var self = this;
+            window.addEventListener('load', function () {
+                self.refresh();
+            }, false);  
+
+            window.addEventListener('hashchange', function () {
+                self.refresh();
+            });
+        }
+        var page = document.querySelector('#page');
+        var wrap = document.querySelector('.router-wrap')
+        window.Router = new Router();
+        Router.route('/', function () {
+        	page.style.backgroundColor = '#F0F0F0';
+        	wrap.style.backgroundColor = '#F0F0F0';
+        });
+
+        Router.route('/pink', function () {
+            //window.location.href='project/page1.html';
+            //
+            page.style.backgroundColor = '#FFE4E1';
+            wrap.style.backgroundColor = '#FFE4E1';
+        });
+
+        Router.route('/yellow', function () {
+            page.style.backgroundColor = '#F0E68C';
+            wrap.style.backgroundColor = '#F0E68C';
+        });
+
+        
+
+        Router.init();
 
 </script>
 </html>
